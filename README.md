@@ -27,15 +27,15 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 ## Using run_analysis.R
 - execute the script by launching the R Console
-- Set the working directory to a location that you want the data files to be generated.
+- Set the working directory to the directory containing the run_analysis.R script
  - `setwd(...)`
-- Load and execute the script source.
+- Load and execute the script source
  - `source("run_analysis.R")`
 
 
 
 ### run_analysis.R will:
-- download the source data zip file if it does not exist
+- download the source data zip file if it does not exist locally
 - extract the zip data to the current working directory
 - combine the following files to create a data set that contains columns for the subject, activity and all the mean and standard deviation features from the original source data (those identified in the original data set by "-mean()" and "-std()" in the feature column name)
  - ./data/features.txt
