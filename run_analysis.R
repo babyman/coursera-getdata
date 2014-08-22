@@ -1,6 +1,7 @@
 # if the data file has not been downloaded fetch it and extract it
 if(!file.exists("Dataset.zip")) {
-  download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "Dataset.zip", "curl")
+  fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+  download.file(fileUrl, "Dataset.zip", "curl")
   # extract the data and rename its containing folder to "data"
   unzip("Dataset.zip")
   file.rename("UCI HAR Dataset", "data")

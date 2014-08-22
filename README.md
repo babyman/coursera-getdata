@@ -1,30 +1,43 @@
-Mean Summary of Human Activity Recognition Using Smartphones Dataset
-===
+# Mean Summary of Human Activity Recognition Using Smartphones Dataset
 
 This R script generates a tidy data set summary from accelerometer measurements taken from Samsung Galaxy S smartphones. The data was recorded from 30 volunteers aged between 19 and 48.  The volunteers performed six activities (WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a Samsung Galaxy S II smartphone.
 
-Full details of the original study can be found at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-This git Repository Includes
----
+## Sources
+
+The data used by this script along with more details on what it represents and how it was collected can be found at:
+
+Full details of the original study can be found at:
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+The source data download can be found here:
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+
+
+## This git Repository Includes
 - this README.md file
 - CodeBook.md - codebook describing the generated tidy data file
 - run_analysis.R - a R script used to create the tidy data file.
 - .gitignore - git configuration
 
-Using run_analysis.R
----
-- execute the script
- - using Rscript from the command line
-  - cd into the repository
-  - Rscript run_analysis.R
- - or Launch the R Console
-  - setwd(...) - Set the working directory to a location that you want the data files to be generated.
-  - source("run_analysis.R") - Load and execute the script source.
 
-run_analysis.R will:
-- download the source data zip file if it does not exist before extracting it to the current working directory.
-- the following data files are then read and combined to create a data set that contains columns for the subject, activity and all the mean and standard deviation features from the original source data (those identified in the original data set by "-mean()" and "-std()" in the feature column name)
+
+## Using run_analysis.R
+- execute the script by launching the R Console
+- Set the working directory to a location that you want the data files to be generated.
+ - `setwd(...)`
+- Load and execute the script source.
+ - `source("run_analysis.R")`
+
+
+
+### run_analysis.R will:
+- download the source data zip file if it does not exist
+- extract the zip data to the current working directory
+- combine the following files to create a data set that contains columns for the subject, activity and all the mean and standard deviation features from the original source data (those identified in the original data set by "-mean()" and "-std()" in the feature column name)
  - ./data/features.txt
  - ./data/activity_labels.txt
  - ./data/test/X_test.txt
@@ -33,14 +46,24 @@ run_analysis.R will:
  - ./data/train/X_train.txt
  - ./data/train/subject_train.txt
  - ./data/train/Y_train.txt
-- save an intermediate file is in the working directory as "combined_data.txt" in comma separated value format
+- update the column names to expand abbreviations
+ - t    -> Time
+ - f    -> Frequency
+ - Acc  -> Acceleration
+ - Gyro -> Gyroscope
+ - Mag  -> Magnitude
+ - std  -> StandardDeviation
+ - mean -> Mean
+- save an intermediate file in the working directory as "combined_data.txt" in comma separated value format
 - the combined data is then summarized by calculating the mean of each variable grouped by subject and activity
+- update the column names again to prefix them with Mean
 - saved the result in the current working directory as "tidy_data.txt" in comma separated value format.
 
-Script Output
----
 
-- combined_data.txt   - the combined original source data
+
+### Script Output
+
+- combined_data.txt   - the complete combined original source data
 - tidy_data.txt       - the tidy data set
 
 tidy_data.txt is tidy because:
@@ -50,15 +73,9 @@ tidy_data.txt is tidy because:
 
 (see also CodeBook.md)
 
-Source
----
 
-The data used by this script along with more details on what it represents and how it was collected can be found at:
 
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-
-Original Data License
----
+## Original Data License
 
 Use of this dataset in publications must be acknowledged by referencing the following publication [1]
 
