@@ -19,8 +19,6 @@ Once combined the data was **grouped by subject and activity** to calculate the 
 
 ## Column details
 
-*unless otherwise noted features (columns beginning Mean...) are normalized and bounded within [-1,1]*
-
 - Subject: identifier of the subject for which this data was collected (range 1-30), each subject was aged between 19 and 48
 
 - Activity: the activity performed during the measurement
@@ -31,6 +29,7 @@ Once combined the data was **grouped by subject and activity** to calculate the 
   - STANDING
   - LAYING
 
+*unless otherwise noted features (columns beginning Mean...) are normalized and bounded within [-1,1]*
 
 - MeanTimeBodyAcceleration-Mean-X
 - MeanTimeBodyAcceleration-Mean-Y
