@@ -1,5 +1,5 @@
 *.zip
-*.csv
+*.txt
 *.history
 
 data/*

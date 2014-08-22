@@ -61,9 +61,10 @@ colnames(result_final) <- gsub("Acc", "Acceleration", names(result_final))
 colnames(result_final) <- gsub("Gyro", "Gyroscope", names(result_final))
 colnames(result_final) <- gsub("Mag", "Magnitude", names(result_final))
 colnames(result_final) <- gsub("std", "StandardDeviation", names(result_final))
+colnames(result_final) <- gsub("mean", "Mean", names(result_final))
 
 # save the new data frame to disk.
-write.csv(result_final, file="combined_data.csv", row.names=FALSE)
+write.table(result_final, file="combined_data.txt", row.name=FALSE)
 
 # generate the tidy data
 result_tidy <- aggregate(result_final[,1:length(features_to_keep)],
@@ -72,4 +73,4 @@ result_tidy <- aggregate(result_final[,1:length(features_to_keep)],
 # update the column names so that they remain meaningful
 colnames(result_tidy) <- gsub("^([^AS])", "Mean\\1", names(result_tidy))
 
-write.csv(result_tidy, file="tidy_data.csv", row.names=FALSE)
+write.table(result_tidy, file="tidy_data.txt", row.name=FALSE)
