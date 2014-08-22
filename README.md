@@ -1,6 +1,6 @@
-# Mean Summary of Human Activity Recognition Using Smartphones Dataset
+# Mean Summary of Human Activity Recognition Using Smartphones
 
-This R script generates a tidy data set summary from accelerometer measurements taken from Samsung Galaxy S smartphones. The data was recorded from 30 volunteers aged between 19 and 48.  The volunteers performed six activities (WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a Samsung Galaxy S II smartphone.
+This R script generates a tidy data set average summary from smartphone accelerometer measurements taken as part of the Human Activity Recognition Using Smartphones data set.
 
 
 ## Sources

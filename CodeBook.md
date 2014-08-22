@@ -1,4 +1,4 @@
-# Code Book for Mean Summary Human Activity Recognition Using Smartphones Dataset
+# Code Book for Mean Summary Human Activity Recognition Using Smartphones
 
 The data produced here is a summarization of prior work described in detail here:
 
@@ -14,7 +14,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 This script builds on the original data (full details of the collection process, original units etc can be found in the README.txt contained within the source data download linked above).  The data has been combined and column names expanded as described in the accompanying README.md file.
 
-Once combined the data was **grouped by subject and activity** to calculate the **average** of the values in each column, this is the data saved in the tidy_data.txt file.
+Once combined the data was **grouped by subject and activity** to calculate the **average** of the values in each column for each group, this is the data saved in the tidy_data.txt file.
 
 
 ## Column details
@@ -29,7 +29,7 @@ Once combined the data was **grouped by subject and activity** to calculate the 
   - STANDING
   - LAYING
 
-*unless otherwise noted features (columns beginning Mean...) are normalized and bounded within [-1,1]*
+*features (columns beginning Mean...) are normalized and bounded within [-1,1]*
 
 - MeanTimeBodyAcceleration-Mean-X
 - MeanTimeBodyAcceleration-Mean-Y
