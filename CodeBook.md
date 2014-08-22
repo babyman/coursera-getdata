@@ -2,7 +2,9 @@
 
 The data produced here is a summarization of prior work described in detail here:
 
-Full details of the original study can be found at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+Full details of the original study can be found at:
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 The source data is available here:
 
@@ -12,12 +14,12 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 This script builds on the original data (full details of the collection process, original units etc can be found in the README.txt contained within the source data download linked above).  The data has been combined and column names expanded as described in the accompanying README.md file.
 
-Once combined the data was grouped by subject and activity to calculate the mean of the values, this is the data saved in the tidy_data.txt file.
+Once combined the data was **grouped by subject and activity** to calculate the **average** of the values in each column, this is the data saved in the tidy_data.txt file.
 
 
 ## Column details
 
-** unless otherwise noted features (columns beginning Mean...) are normalized and bounded within [-1,1] **
+*unless otherwise noted features (columns beginning Mean...) are normalized and bounded within [-1,1]*
 
 - Subject: identifier of the subject for which this data was collected (range 1-30), each subject was aged between 19 and 48
 
@@ -28,6 +30,7 @@ Once combined the data was grouped by subject and activity to calculate the mean
   - SITTING
   - STANDING
   - LAYING
+
 
 - MeanTimeBodyAcceleration-Mean-X
 - MeanTimeBodyAcceleration-Mean-Y
