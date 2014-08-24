@@ -54,11 +54,11 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
  - Mag  -> Magnitude
  - std  -> StandardDeviation
  - mean -> Mean
-- remove any '-' characters
-- convert all column names to lowercase
+ - remove any '-' characters
 - save an intermediate file in the working directory as "combined_data.txt" in comma separated value format
 - the combined data is then summarized by calculating the mean of each variable grouped by subject and activity
 - update the column names again to prefix them with Mean
+- convert all column names to lowercase
 - saved the result in the current working directory as "tidy_data.txt" in comma separated value format.
 
 
