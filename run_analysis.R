@@ -63,6 +63,7 @@ colnames(result_final) <- gsub("Gyro", "Gyroscope", names(result_final))
 colnames(result_final) <- gsub("Mag", "Magnitude", names(result_final))
 colnames(result_final) <- gsub("std", "StandardDeviation", names(result_final))
 colnames(result_final) <- gsub("mean", "Mean", names(result_final))
+colnames(result_final) <- gsub("-", "", names(result_final))
 
 # save the new data frame to disk.
 write.table(result_final, file="combined_data.txt", row.name=FALSE)
@@ -73,5 +74,8 @@ result_tidy <- aggregate(result_final[,1:length(features_to_keep)],
 
 # update the column names so that they remain meaningful
 colnames(result_tidy) <- gsub("^([^AS])", "Mean\\1", names(result_tidy))
+# make all the column names lowercase, not sure I agree with this but it's in week 4 videos,
+# comment to leave them in camel case
+colnames(result_tidy) <- tolower(names(result_tidy))
 
 write.table(result_tidy, file="tidy_data.txt", row.name=FALSE)
